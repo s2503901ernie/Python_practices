@@ -1,0 +1,17 @@
+// My Ping Pong Srevices
+
+syntax = "proto3";
+
+service PingPongService {
+  // Receieve Ping and return Pong
+  rpc ping (Ping) returns (Pong) {}
+}
+
+message Ping {
+  // The number is in increment and cannot be in other formats.
+  int32 count = 1;
+}
+
+message Pong {
+  int32 count = 1;
+}
